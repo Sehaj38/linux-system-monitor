@@ -1,20 +1,18 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include<sstream>
+#include<iostream>
+#include<unistd.h>
+#include "cpu.h"
 using namespace std;
 
 int main() {
-    ifstream file("/proc/stat");
-    string cpu;
-    long user, nice, system, idle;
+    CPUData prev = readCPU();
+    while(true) {
+        sleep(1);
+        CPUData curr = readCPU();
+        double CPUUsage = calculateCPU(prev, curr);
 
-    if(file.is_open()){
-        file >> cpu >> user >> nice >> system >> idle;
-        cout << "User : " << user << endl;
-        cout << "System : " << system << endl;
-        cout << "Idle : " << idle << endl;
+        cout << "\rCPU Usage : " << CPUUsage << "%   " << flush;
+
+        prev = curr;
     }
-
     return 0;
 }
