@@ -2,7 +2,7 @@
 
 A terminal-based **Linux system monitor** written in **pure C++**, using **ncurses** for UI and the Linux **/proc filesystem** for data.
 
-This project is built to understand how real system monitors (like `top` and `htop`) work internally — **no third-party monitoring libraries**, no fake metrics, no abstractions hiding the kernel.
+This project is built to understand how real system monitors (like `top` and `htop`) work internally.
 
 Linux-only by design.
 
