@@ -58,4 +58,5 @@ src/
 │ ├── context.cpp / context.h
 │ └── interrupt.cpp / interrupt.h
 ```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fb624f9f-6abd-4e3b-b2a2-1ab107ef5834" />
 
